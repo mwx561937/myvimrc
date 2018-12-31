@@ -1,4 +1,5 @@
 set rtp+=$vim/vimfiles/bundle/Vundle.vim
+
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/calendar-vim'
@@ -21,8 +22,14 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'posva/vim-vue'
+Plugin 'tpope/vim-commentary'
+Plugin 'gaving/vim-textobj-argument'
+Plugin 'vim-scripts/c.vim'
+Plugin 'majutsushi/tagbar'
 " 第五页
 call vundle#end()
+
+nmap <f8> :TagbarToggle<cr>
 
 
 " Vim
@@ -59,8 +66,8 @@ set encoding=utf-8
 execute pathogen#infect()
 
 
-set guioptions-=m
-set guioptions-=T
+"set guioptions-=m
+"set guioptions-=T
 
 
 
@@ -151,6 +158,7 @@ inoremap <M-p> <C-p>
 inoremap cg console.log()<esc>i
 nnoremap <c-k> dd2kp
 nnoremap <c-j> ddp
+nnoremap <c-f5> :silent !hello.exe<cr>
 inoremap <S-cr> <esc>:normal ,<cr>i
 inoremap <M-m> <esc>:normal n<cr>a
 inoremap <M-M> <esc>:normal N<cr>a
@@ -184,8 +192,10 @@ iabbr setI setInterval
 inoremap with with(document){<cr>}<esc>O
 nnoremap f> f>i 
 inoremap <leader><html> <html></html><esc>cit<cr><head></head><cr><script></script><cr><body></body><cr>
-nnoremap <tab> /\<[a-z]*="<cr>
-nnoremap <S-Tab> ?\<[a-z]*="<cr>
+nnoremap <tab> /\<[a-z]*="\\|\<[a-z]\+=[0-9]\+%<cr>
+"nnoremap <tab> /a\\|b<cr>
+" nnoremap <S-Tab> ?\<[a-z]*="<cr>
+nnoremap <S-Tab> ?\<[a-z]*="\\|\<[a-z]\+=[0-9]\+%<cr>
 nnoremap vii f"vi"
 nnoremap cii f"ci"
 nnoremap dii f"di"
