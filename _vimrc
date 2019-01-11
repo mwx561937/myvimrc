@@ -26,6 +26,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'gaving/vim-textobj-argument'
 Plugin 'vim-scripts/c.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'junegunn/vim-easy-align'
 " 第五页
 call vundle#end()
 
@@ -150,6 +151,7 @@ vnoremap { o<esc>i{<esc>gvol<esc>a}
 ""inoremap " ""<esc>i
 ""inoremap ' ''<esc>i
 inoremap <tab> <right>
+nnoremap ; "ayiwb/<c-R>a<cr>
 inoremap func function
 "inoremap <cr> <cr><esc>O
 inoremap <leader><esc> <esc>==
@@ -193,6 +195,8 @@ inoremap with with(document){<cr>}<esc>O
 nnoremap f> f>i 
 inoremap <leader><html> <html></html><esc>cit<cr><head></head><cr><script></script><cr><body></body><cr>
 nnoremap <tab> /\<[a-z]*="\\|\<[a-z]\+=[0-9]\+%<cr>
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 "nnoremap <tab> /a\\|b<cr>
 " nnoremap <S-Tab> ?\<[a-z]*="<cr>
 nnoremap <S-Tab> ?\<[a-z]*="\\|\<[a-z]\+=[0-9]\+%<cr>
@@ -214,6 +218,7 @@ hi VertSplit guibg=red
 set guifont=Consolas:h10:i
 set diffexpr=MyDiff()
 set nu
+set hlsearch
 
 
 
