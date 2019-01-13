@@ -38,3 +38,14 @@ git pull origin master:dev
 ==
 git fetch origin master:dev
 git merge dev
+
+
+
+
+git push 远程主机名 本地分支：远程分支
+
+git push origin :hello
+删除hello分支
+
+
+
