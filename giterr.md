@@ -27,3 +27,14 @@ git config --global user.email "XXX"
 
 修改密码
 git config --global credential.helper store (输入这个命令后,以后只要在输入一次用户名密码)
+
+
+git pull 远程主机名 远程分支名：本地分支名
+
+(分号可以省略)
+e:
+git pull origin master:dev
+
+==
+git fetch origin master:dev
+git merge dev
