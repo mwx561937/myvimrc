@@ -1,4 +1,4 @@
-set rtp+=$vim/vimfiles/bundle/Vundle.vim
+set rtp+=$vim/vimfiles/Vundle.vim
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -27,7 +27,7 @@ Plugin 'gaving/vim-textobj-argument'
 Plugin 'vim-scripts/c.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'junegunn/vim-easy-align'
-" ç¬¬äº”é¡µ
+" µÚÎåÒ³
 call vundle#end()
 
 nmap <f8> :TagbarToggle<cr>
@@ -55,16 +55,17 @@ let g:indentLine_conceallevel = 2
 let g:indentLine_setConceal = 0
 let g:indentLine_enabled = 0
 
+set ignorecase
 
 
-"akdsè§£å†³ä¸­æ–‡ä¹±ç é—®é¢˜ï¼Œä½†ä¼šäº§ç”Ÿå…¶å®ƒé—®é¢˜
+"akds½â¾öÖĞÎÄÂÒÂëÎÊÌâ£¬µ«»á²úÉúÆäËüÎÊÌâ
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 
 
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 
 "set guioptions-=m
@@ -99,18 +100,18 @@ augroup END
 "let g:javascript_conceal_arrow_function       = "~"
 "let g:javascript_conceal_noarg_arrow_function = "~~"
 "let g:javascript_conceal_underscore_arrow_function = "~~~"
-let g:javascript_conceal_function             = "Æ’"
-let g:javascript_conceal_null                 = "Ã¸"
+let g:javascript_conceal_function             = "0™6"
+let g:javascript_conceal_null                 = "0‹3"
 let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_return               = "r"
-let g:javascript_conceal_undefined            = "Â¿"
+let g:javascript_conceal_undefined            = "0†7"
 let g:javascript_conceal_NaN                  = "N"
-let g:javascript_conceal_prototype            = "Â¶"
-let g:javascript_conceal_static               = "â€¢"
-let g:javascript_conceal_super                = "Î©"
-let g:javascript_conceal_arrow_function       = "â‡’"
-let g:javascript_conceal_noarg_arrow_function = "ğŸ…"
-let g:javascript_conceal_underscore_arrow_function = "ğŸ…"
+let g:javascript_conceal_prototype            = "0…9"
+let g:javascript_conceal_static               = "6¦1"
+let g:javascript_conceal_super                = "¦¸"
+let g:javascript_conceal_arrow_function       = "6Í0"
+let g:javascript_conceal_noarg_arrow_function = "•0¥5"
+let g:javascript_conceal_underscore_arrow_function = "•0¥5"
 
 
 
@@ -121,8 +122,8 @@ map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 
 syntax on
 filetype plugin indent on
-set tabstop=2
-set softtabstop=2
+"set tabstop=2
+"set softtabstop=2
 set shiftwidth=2
 
 source $VIMRUNTIME/defaults.vim
@@ -150,9 +151,11 @@ vnoremap { o<esc>i{<esc>gvol<esc>a}
 ""inoremap { {}<left>
 ""inoremap " ""<esc>i
 ""inoremap ' ''<esc>i
-inoremap <tab> <right>
+"inoremap <tab> <right>
 nnoremap ; "ayiwb/<c-R>a<cr>
 inoremap func function
+nnoremap <c-n> :!javac %<cr>
+nnoremap <c-p> :!java test<cr>
 "inoremap <cr> <cr><esc>O
 inoremap <leader><esc> <esc>==
 inoremap <M-n> <C-n>
@@ -169,7 +172,7 @@ nnoremap <M-M> :normal N<cr>a
 nnoremap <c-w>' viwb<esc>i'<esc>ea'
 nnoremap <s-w> :vsp<cr>:e .<cr>
 noremap <s-t> :sp<cr>:e .<cr>
-nnoremap <c-f2> :w<cr>:silent !%<cr>
+"nnoremap <c-f2> :w<cr>:silent !%<cr>
 nnoremap <c-f3> :wa<cr>:!test.html<cr>
 nnoremap <f2> :NERDTree<cr>
 nnoremap <f3> :NERDTreeFind<cr>
@@ -256,6 +259,3 @@ function! MyDiff()
     let &shellxquote=l:shxq_sav
   endif
 endfunction
-
-
-
