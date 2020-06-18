@@ -6,8 +6,12 @@ set nu
 set tags=./tags,tags;$HOME
 "/home/meng/code/tags
 
+set foldmethod=indent
+
+
 "set tags=tags;
 set autochdir
+map <l> <ctrl>
 
 syntax on
 filetype plugin indent on
@@ -44,6 +48,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'Rip-Rip/clang_complete'
 Plug 'gaving/vim-textobj-argument'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 
@@ -53,9 +58,10 @@ call plug#end()
 nnoremap <silent> <leader>. :cd %:p:h<CR>
 
 inoremap <tab> <right>
-nmap <f8> :TagbarToggle<cr>
+"nmap <f8> :TagbarToggle<cr>
+nmap <leader>t :TagbarToggle<cr>
 nmap <f2> :MakeWithShell<cr>
-map L <esc>yiw:Man <C-R>"<cr>
+map L <esc>yiw:Man 3 <C-R>"<cr>
 
 nnoremap <leader>v :NERDTreeFind<cr>
 nnoremap <leader>g :NERDTreeToggle<cr>
@@ -82,10 +88,15 @@ nnoremap <c-k> <c-w>k
 set smartindent
 set cursorline
 hi VertSplit guifg=red
+hi StatusLine guifg=red
 set guifont=Consolas:h10:i
 set diffexpr=MyDiff()
 set nu
 set hlsearch
+
+map <s-Tab> :tabn<cr>
+
+"
 "
 "
 "
