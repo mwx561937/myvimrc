@@ -1,5 +1,8 @@
 set nu
 
+let g:AutoPairsMapCR = 0
+imap <silent><CR> <CR><Plug>AutoPairsReturn
+
 "指定tags文件，方便跳转，可以用ctrl+]来跳转
 "，如果不行就g+]，因为有时候可能有多个结果
 "set tags+=/home/meng/code/openssldemo/tags
