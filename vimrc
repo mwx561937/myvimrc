@@ -1,6 +1,6 @@
 set nu
 
-
+path+=/usr/include/arm-linux-gnueabihf/   "这个可以配置 gf 跳转头文件路径
 set rtp+=/usr/bin/fzf
 
 
