@@ -91,7 +91,12 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 
+Plug 'lifepillar/vim-mucomplete'
+
 call plug#end()
+
+set completeopt+=noselect
+let g:mucomplete#enable_auto_at_startup = 1
 
 
 let g:SuperTabRetainCompletionType = 2
