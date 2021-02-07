@@ -54,6 +54,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
+Plug 'vhdirk/vim-cmake'
+Plug 'skywind3000/asyncrun.vim'
+
 
 call plug#end()
 
